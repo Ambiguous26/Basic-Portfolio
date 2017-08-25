@@ -143,7 +143,7 @@ header {
     font-size:  125%;
     text-align:     center;
     width:  250px;
-    height:  300px;
+    height:  250px;
 
 }
 
@@ -194,7 +194,7 @@ footer {
 }
 
 #contact {
-    float: left;
+    
     background-color: white;  
     padding: 10px;
     vertical-align: center;
@@ -207,7 +207,7 @@ footer {
 }
 #main-content2 {
     
-    float: bottom;
+    float: left;
     font-size: 150%; 
     color:  #4aaaa5;
     font-weight:    bold;
@@ -228,7 +228,9 @@ footer {
     margin:  10px;
     margin-left:   0px;
     margin-bottom: 0px;
-    margin-top: -105px;
+            
+                /*I add to subtract top margin to get it to match*/
+    margin-top: -475px;
     padding:    0px;
     background-color:   white;
     color:  #4aaaa5;
@@ -248,3 +250,96 @@ footer {
     vertical-align: center;
     border-bottom: solid #dddddd 2px; 
 }
+
+#main-content3 {
+    
+    
+    font-size: 125%; 
+    color:  #4aaaa5;
+    font-weight:    bold;
+    vertical-align:     center;
+    border-bottom: solid #dddddd 5px; 
+    background-color:  #ffffff;
+    padding: 5px;
+    margin-bottom:0px;
+    margin-right: : 0px;
+    margin: 0px;
+    margin-left: 10px;
+    width:  350px;
+}
+.Connect_with_Me3 {
+
+    float:  right;
+    margin:  10px;
+    margin-left:   0px;
+    margin-bottom: 0px;
+    margin-top: -93px;
+    padding:    0px;
+    background-color:   white;
+    color:  #4aaaa5;
+    font-size:  125%;
+    text-align:     center;
+    width:  250px;
+    height:  250px;
+
+}
+
+#connect_with_metext3 {
+    margin: 10px;
+    padding-top:  0px;
+    font-size: 125%; 
+    color:  #4aaaa5;
+    font-weight:    bold;
+    vertical-align: center;
+    border-bottom: solid #dddddd 2px; 
+}
+/*. is for class # for ids*/
+.portfolio {
+    
+    float: left;
+    position: relative;
+    background-color: white;  
+    padding: 10px;
+    vertical-align: center;
+    text-align: left;
+    font-size: 1.2em;
+    font-family:    "georgia", Times, Times New Roman, Serif;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 0px;
+    color: white;
+    width: 340px;
+    height: 525px;
+}
+.portfolioimage {
+    
+    background-image: url(" ../images/hangman.jpeg");
+    width: 45%;
+    height: 165px;
+
+    
+}
+
+.portfoliotext {
+
+   
+   margin-top: 115px;
+   position: absolute;
+    text-align: center;
+    width: 50%;
+    height: 1.6em;
+    color: white;
+    background-color:#4aaaa5;
+    z-index: 2;
+
+
+}
+
+.imageformat {
+   position: relative;      
+   z-index: 1;
+   margin: 0px;
+   width: 50%;
+}
+
+/*need to look at the values with regards to margin height and width*/

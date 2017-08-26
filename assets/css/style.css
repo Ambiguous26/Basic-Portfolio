@@ -298,16 +298,15 @@ footer {
     
     float: left;
     position: relative;
-    overflow: auto;
     background-color: white;  
-    padding: 10px;
+    padding: 20px;
     vertical-align: center;
     text-align: left;
     font-size: 1.2em;
     font-family:    "georgia", Times, Times New Roman, Serif;
     margin-bottom: 10px;
     margin-left: 10px;
-    margin-right: 20px;
+    margin-right: 10px;
     color: white;
     width: 340px;
     height: 525px;
@@ -324,15 +323,15 @@ footer {
 .portfoliotext {
 
    
-    margin-top: 115px;
-    position: absolute;
+   margin-top: 115px;
+   position: absolute;
     text-align: center;
-    width: 100%;
+    width: 50%;
     height: 1.6em;
     color: white;
     background-color:#4aaaa5;
     z-index: 2;
-  
+
 
 }
 
@@ -340,7 +339,7 @@ footer {
    position: relative;      
    z-index: 1;
    margin: 0px;
-   width: 100%;
+   width: 50%;
 }
 
 /*need to look at the values with regards to margin height and width*/

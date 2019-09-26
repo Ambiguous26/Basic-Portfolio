@@ -1,117 +1,83 @@
+<!--PSEUDOCODE: biggest issues on this page left to resolve would be 1) text about myself. 2) margins/fonts  -->
+<!--Built my HTML first  -->
+
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Aram Albaro</title>
-
+		<!-- Code below is for favicon-->
+		<link rel="icon" type="image/png" href="assets/images/me.jpg">
+		<!-- MeyerWeb Reset is meant to reset all default style settings-->
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">	
+		<!-- This CSS styling should overwrite the Reset above since the code follows the reset-->
     	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 		<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
     <!-- <link rel="stylesheet" type="text/css" href="reset.css"> -->
 
 	</head>
-	<header>
-		
-		<div id="headerlinks">
-						<div id="links">	
-								<a href="index.html" style="text-decoration: none;"><font color=#777777>About</a> |
-								<a href="portfolio.html" style="text-decoration: none;"><font color=#777777>Portfolio</a> |
-								<a href="contact.html" style="text-decoration: none;"><font color=#777777>Contact</a> 
-						</div>
-					
-						<div id="yourname">
-							<h1>	
-								Aram Albaro
-		
-							</h1>
-		
-						</div>
-		</div>
-	
-	</header>
 
 	<body>
+		<!-- logic was to tackle the page from the top down and left to right-->
 	
-		<div id="wrap2">	
-			<div id="main-content2">
-				
-
-
-
-				<h4>
+		<header id="masthead">
+			<div class="container">
+				<a href="index.html" id="logo">Aram Albaro</a>	
+					<nav>
+						<a href="index.html">About</a>
+						<a href="portfolio.html">Portfolio</a>
+						<a href="contact.html">Contact</a> 
+					</nav>	
+			</div>	
+		</header>
+	<!-- added this div after creating the portion below because I needed to put in all together -->
+		<div id="main-container" class="container">
+			<section class="main-section">
+				<h1>
 					Contact
-				</h4>
-		
-
-			</div>
-			<div id="contact">
-					
-
-					<!-- PSEUDOCODE: Still need to figure out how to make the text area longer for: "Name" and "Email" without including the little symbol so it can be stretched.-->
-
-					<form>
-						<form action="mailto:someone@example.com" method="post" enctype="text/plain">
-						Name<br>
-						<input type="text" name="name" placeholder="John Smith"></textarea><br>
+				</h1>
+				<form id="contact-form">
+					<!--Need to review unordered lists and ordered lists-->
+					<ul>
+						<li>
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" placeholder="John Smith" required="required">
+						</li>
 						
-						Email<br>
-						<input type="text" name="mail" rows= "1" cols="55" placeholder="example@gmail.com"><br>
-					
+						<li>
+							<label for="email">Email</label>
+							<input type="text" name="email" id="email" placeholder="example@gmail.com" required="required">
+						</li>
 						
-						Message<br>
-						<span class="wpcf7-form-control-wrap your-message"><br>
-						<textarea rows="10" cols="55" name="your-message"></textarea>
-						</span><br>
+						<li>
+							<label for="message">Message</label>
+							<textarea id="message" name="message" id="message" required="required"></textarea>
+						</li>
+					</ul>
+					<input type="submit" name="submit">
+				</form>
+			</section>
+			<section class="sidebar">
+				<div id="connect">
+					<h2>Connect with me</h2>
+						<a href="https://github.com/AramAlbaro"><img src="assets/images/github.png" class="social" alt="Github"></a>
+						<a href="https://www.linkedin.com/in/aram-albaro/"><img src="assets/images/linkedin.png" class="social" alt="LinkedIn"></a>
+						<a href="https://stackoverflow.com/users/8422452/aram-albaro?tab=profile"><img src="assets/images/stackoverflow.png" class="social" alt="Stack Overflow"></a>
 
-						
-						<input type="Submit" value="Submit" id="button"><br>
-						
-						</form>
-					</form>
-						
-			</div>
-
-
-		</div>		
-
-	<!-- Need to add a photo also see teachers source info behind for hieght and width <-->
-	
-								
-
-			<!-- This is the body of my webpage -  -->
-			<div class="Connect_with_Me2">
-				<div id="connect_with_metext2">
-					<h3>
-						Connect with Me
-					</h3>
 				</div>
-					
-				<br>	
+			</section>
+		</div>
 
-				<div id="logos">
-		
-					<div class="imagecontainer"><a href="https://github.com/Ambiguous26">
-					<img src="assets/images/github.png" class="social-icon" height="50"></a></div>
+		<footer>
+			<div class="container">	 
+				<!-- code below is for the copyright symbol -->
+				&copy; Copyright 2019 Aram Albaro
+			</div>	
+		</footer>
+	</body>
+</html>
 
-										
-	
-					<div class="imagecontainer"><a href="https://www.linkedin.com/feed/?trk=nav_back_to_linkedin">
-					<img src="assets/images/linkedin.png" class="social-icon" height="50"></a></div>
-					
-					
 
-					<div class="imagecontainer"><a href="https://stackoverflow.com/users/8422452/aram-albaro?tab=profile">
-					<img src="assets/images/stackoverflow.png" class="social-icon" height="50"></a></div>
-					
-				</div>
-				
-			</div>
-		
-					
 
-		
-				
-					<footer>	 
-					<!-- code below is for the copyright symbol -->
-						&copy; Copyright 2017 Aram Albaro
-					</footer>
-	

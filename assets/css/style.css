@@ -1,368 +1,233 @@
 /*PSEUDOCODE: Need to verify that all fonts were properly accounted for. I noticed that switching between files that there were discrepencies. Placement. Needs to be more consistant. Failing to understand how to fix margin issues.*/
+/*Box sizing includes box and padding to be included in every div. Box sizing allows us to make changes without 
+ adding to the space of the div.*/
 
+ /* needed to include the astrix fot the code to work*/
+* {
+    box-sizing: border-box;
+}
 
-
+/*By including the font type within the body, it acts as the default unless I tell it to be something different by using an
+ID or Class*/
 body {
-    width: 960px;
+    background: url('../images/concrete_seamless.png');
+    font-size: 18px;
+    line-height: 34px;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    /*width: device-width;*/
+    color: #777;
+    /*
     margin: 0px;
-    /*background-color: #0e0e0e
-*/
-    background-color:  #e9e9e9;
-
+    /*background-color: #0e0e0e 
+    background-color:  #e9e9e9;*/
+}
+/*in all items that I have called a container should have the following styles unless I call it different somewhere else*/
+.container {
+    /*any elements that have the the id container should take up the 100% of the width and have max width of 960px*/
+    width: 100%;
+    max-width: 960px;
+    /* 0 for top and auto center for right, bottom, left*/
+    margin: 0 auto;
+    /* has to do with floating elements. Want to make sure containers are free of styles */
+    clear: both;
 }
 
-p  {
-    color: #777777;
-
+h1, h2, h3, p {
+    margin-bottom: 20px;
 }
 
-
-
-
+p:last-child {
+    margin-bottom: 0;
 }
 
-
-
-
-
-
-
-header {
-    width: 960px;
+h1, h2, h3 {
+    font-family: 'Georgia', 'Times New Roman', Times, Times New Roman, serif;
+    font-weight: 700px;
+    color: #4aaaa5;
 }
 
-
-       
+h1 {
+    font-size: 30px;
+    line-height: 49px;
+    border-bottom: 3px solid #ddd;
+    padding-bottom: 20px;
 }
 
-#headerlinks {
-    
-      
-   
-    
-    margin-top:     0px;
-    margin-bottom:  0px;
-    margin-left:20px;
-    padding:    0px; 
-    background-color:   white;
-    font-family:    Georgia, Times, Times New Roman, Serif;
-    font-size:  125%;
-    /* 1) why is the color in the text not showing wrote it into html code*/
-       
-    text-align: right;  
-    vertical-align:     center; 
-    height: 30px;
-    border-bottom:  solid #cccccc;
-   
-
-
-      
+h2, h3 {
+    font-size: 22px;
 }
 
-#links{
-    
-/*1) why are my colors not showing in my links/ font looks funny too had to write into HTML code*/
-    margin-right: 20px;
-    color: #777777;
-    position: right;
-    text-align: right;
-    vertical-align: center;
-    margin-right:   0px;
-    padding:13px;
-    background-color:   white;
+/* header*/
+
+#masthead {
+    background: #fff;
+    margin: 0 0 30px;
+    /*syntax is the following - z-index: auto|number|initial|inherit;*/
+    z-index: 99;
+    color: #fff;
+    overflow: auto;
+    border-bottom: 2px solid #ccc;
+    position: fixed;    
+    width: 100%;
+}
+
+#logo {
+    width: 250px;
+    height: 90px;
+    background: #4aaaa5;
+    float: left;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    text-align: center;
+    line-height: 90px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: none;   
+}
+/* First everything was styled under the nav tab. The following styles will over-write this default*/
+nav {
+    float: right;
+    margin-top: 25px;
+}
+nav a {
+    color: #999;
     text-decoration: none;
+    margin-left: 15px;
+    /* Originally it was stacked in a block and this style put it inline where they lay next to each other*/
+    display: inline-block;
+    border-left: 1px solid #efefef;
+    padding-left: 15px;
+    line-height: 18px;
 }
-
-
-#yourname {
-       
-    margin: 20px;
-    margin-top: -75px; 
-    margin-left:    10px;
-    margin-right:   0px;
-    padding: 0px;
-    background-color: #4aaaa5;
-    color: white;
-    font-size: 125%;
-    font-weight:    bold; 
-                            /*2) is the time new roman below suppose to be not blue?*/
-    font-family:    "georgia", Times, Times New Roman, Serif;    
-    border-color:   #cccccc;
-    text-align:     left;  
-    height:     50px;
-    width:  320px;
-
+/* Because borders were added above to the left. This code says that the first link in the navigation section shouldn't have a border*/
+nav a:first-child {
+    border-left: 0 none;
 }
-
-#wrap {
-
-    width: 960px;
-}
-
-
-#index-about {
-   
-    
-    margin: 0px;
-    padding-top: 0px;
-    font-size: 125%; 
-    color:  #4aaaa5;
-    font-weight:    bold;
-    vertical-align:     center;
-    border-bottom: solid #dddddd;  
-} 
-#main-content {
-    background-color:  #ffffff;
-    padding: 10px;
-    margin-right: : 0px;
-    border-color:   #dddddd;
-    margin: 10px;
-    margin-left: 10px;
-    color:  #777777;
-    float:  left;
-    width:  500px;
-
-}
-
-#image1 {
-    
-    float:  left;
-    vertical-align:     top;
-    padding: 5px;
-    width:  116px;
-    height:     175px;
-    margin: 0px;
-    margin-top: 0px;
-     
-
-}
-
-.Connect_with_Me {
-
-    float:  right;
-    margin:  10px;
-    margin-left:   0px;
-    padding:    0px;
-    background-color:   white;
-    color:  #4aaaa5;
-    font-size:  125%;
-    text-align:     center;
-    width:  250px;
-    height:  250px;
-
-}
-
-#connect_with_metext {
-    margin: 10px;
-    padding-top:  0px;
-    font-size: 125%; 
-    color:  #4aaaa5;
-    font-weight:    bold;
-    vertical-align: center;
-    border-bottom: solid #dddddd 2px; 
-}
-
-
-.logos {
-  
-   
-}
-
-.imagecontainer {
-        float:left;
-        margin-left: 10%;
-     
-}
+/*main*/
+ #main-container {
+     padding-top: 130px;  
+ }
+ .main-section {
+     background: #fff;
+     padding:  30px;
+     /* as a reminder margin works clock-wise top, right, bottom, left*/
+     margin: 0 0 40px 0;
+     /*Take 100% of the width */
+     width: 100%;
+     /*Thought you are tgo take 100% of the with you size is limited to expanding to 650px */
+     max-width: 650px;
+     float: left;
+     border: 1px solid #ddd;
+ }
+ .auth-image {
+     width: 200px;
+     height: auto;
+     margin-top: 10px;
+     float: left;
+     margin-right: 25px;
+ }
+ /* Sidebars */
+ .sidebar  {
+    background: #fff;
+    padding: 30px;
+    width: 100%;
+    max-width: 270px;
+    float: right;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+ }
+ h2, .sidebar, h3 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    line-height: 22px;
+ }
+ .social {
+    width: 62px;
+    height: 62px;
+    margin-top: 8px;
+    margin-right: 5px;
+ }
+ .social:last-child {
+     margin-right: 0;
+ }
+ .connect img{
+     text-decoration: none;
+     text-decoration-line: none;
+ }
+/* Footer */
 
 footer {
-    clear:  both    ;
-    
-    margin-bottom: 0px; 
-    background-color: grey;
-    text-align:     center; 
-    height:     40px;
-    color:  #A8A8A8;
-    border-top: solid 10px;
-    border-color: #4aaaa5;
-    vertical-align: center;
-    padding-top: 20px;
- 
-}
-
-#wrap2 {
-
-    width: 560px;
-    margin-left: 10px;
-    margin-right:  10px;
-    background-color: white;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 15px ;
-}
-
-#contact {
-    
-    background-color: white;  
-    padding: 15px 30px;
-    margin-right: 0px;
-    vertical-align: center;
-    text-align: left;
-    font-size: 125%;
-    font-family:    "georgia", Times, Times New Roman, Serif;
-    margin-bottom: 15px;
-    width: 55px;
-
-
-
-}
-#main-content2 {
-    
-    float: left;
-    font-size: 125%; 
-    color:  #4aaaa5;
-    font-weight:    bold;
-    vertical-align:     center;
-    border-bottom: solid #dddddd 5px; 
-    background-color:  #ffffff;
-    padding: 5px;
-    margin-bottom:0px;
-    margin-right: : 0px;
-    margin: 0px;
-    margin-left: 25px;
-    width:  500px;
-}
-
-
-#button {
-    background-color: #4aaaa5; /*teal*/
-    border: none;
-    color: white;
-    padding: 15px 32px;
+    background: #666;
+    color: #fff;
+    padding: 30px 0;
+    clear: both;
+    border-top: 8px solid #4aaaa5;
+    color: #ccc;
+    font-size: 12px;
     text-align: center;
-    
-    font-size: 16px;
 }
-
-
-
-.Connect_with_Me2 {
-
-    float:  right;
-    margin:  10px;
-    margin-left:   0px;
-    margin-bottom: 0px;
-            
-                /*I add to subtract top margin to get it to match*/
-    margin-top: -530px;
-    padding:    0px;
-    background-color:   white;
-    color:  #4aaaa5;
-    font-size:  125%;
-    text-align:     center;
-    width:  250px;
-    height:  250px;
-
-}
-
-#connect_with_metext2 {
-    margin: 10px;
-    padding-top:  0px;
-    font-size: 125%; 
-    color:  #4aaaa5;
-    font-weight:    bold;
-    vertical-align: center;
-    border-bottom: solid #dddddd 2px; 
-}
-
-#main-content3 {
-    
-    
-    font-size: 125%; 
-    color:  #4aaaa5;
-    font-weight:    bold;
-    vertical-align:     center;
-    border-bottom: solid #dddddd 5px; 
-    background-color:  #ffffff;
-    padding: 5px;
-    margin-bottom:0px;
-    margin-right: : 0px;
-    margin: 0px;
-    margin-left: 10px;
-    width:  700px;
-}
-.Connect_with_Me3 {
-
-    float:  right;
-    margin:  10px;
-    margin-left:   0px;
-    margin-bottom: 0px;
-    margin-top: -93px;
-    padding:    0px;
-    background-color:   white;
-    color:  #4aaaa5;
-    font-size:  125%;
-    text-align:     center;
-    width:  240px;
-    height:  250px;
-
-}
-
-#connect_with_metext3 {
-    margin: 10px;
-    padding-top:  0px;
-    font-size: 125%; 
-    color:  #4aaaa5;
-    font-weight:    bold;
-    vertical-align: center;
-    border-bottom: solid #dddddd 2px; 
-}
-/*. is for class # for ids*/
-.portfolio {
-    
-    float: left;
+/* Portfolio Page */
+.work   {
+    width: 274px;
+    overflow: auto;
     position: relative;
-    background-color: white;  
-    padding: 20px;
-    vertical-align: center;
-    text-align: left;
-    font-size: 1.2em;
-    font-family:    "georgia", Times, Times New Roman, Serif;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    color: white;
-    width: 700px;
-    height: 525px;
+    float: left;
+    margin: 20px 0 25px;
 }
-.portfolioimage {
-    
-    background-image: url(" ../images/hangman.jpeg");
-    width: 50%;
-    height: 165px;
-
-    
+/* The nth child selector allows me to list every 2 items */
+.work:nth-child(even) {
+    margin-right: 40px;
 }
-
-.portfoliotext {
-
-   
-   margin-top: 115px;
-   position: absolute;
+.work img {
+    width: 100%;
+    border: 0 none;
+    opacity: .8;
+}
+.work h3 {
+    border-bottom: 0;
+    background: #4aaaa5;
+    color: #fff;
     text-align: center;
-    width: 50%;
-    height: 1.6em;
-    color: white;
-    background-color:#4aaaa5;
-    z-index: 2;
-
-
+    position: absolute;
+    /* This nudged the h3 text up 20px from the bottom */
+    bottom: 20px;
+    padding: 15px;
+    width: 100%;
+    line-height: 30px;
+    margin-bottom: 0;
+    font-weight: 300;
 }
-
-.imageformat {
-   position: relative;      
-   z-index: 1;
-   margin: 0px;
-   width: 50%;
+/* Contact Page*/
+#contact-form ul {
+    margin-bottom: 20px;
 }
-
-/*need to look at the values with regards to margin height and width*/
+#contact-form li {
+    margin-bottom: 10px;
+}
+label,
+input[type=text],
+input[type=email],
+textarea {
+    display: block;
+    width: 100%;
+}
+input[type=text],
+input[type=email],
+textarea {
+    height: 35px;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    font-size: 14px;
+}
+textarea {
+    height: 200px;
+}
+input[type=submit] {
+    background: #4aaaa5;
+    border: 0 none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 30px;
+    cursor: pointer;
+}
